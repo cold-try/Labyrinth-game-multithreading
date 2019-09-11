@@ -355,12 +355,16 @@ class DeplacebotM():
             if (x1, x2) == tuplepoint:
                 if labyrinthe[x1][x2] == "O":
                     print(" ")
-                    print("Il y a déjà un mur! ")
+                    print("La porte a dejà ete muree!")
                 else:
                     labyrinthe[x1][x2] = "O"
                     data1[0] = str(x1)
                     data2[0] = str(x2)
                     setting[0] = str(2)
+                    
+        if labyrinthe[x1][x2] == "O" and (x1, x2) not in ppoint:
+            print(" ")
+            print("Il y a déjà un mur! ")
 
         if labyrinthe[x1][x2] == " ":
             print("Ce n'est pas une porte!")

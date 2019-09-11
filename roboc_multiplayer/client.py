@@ -247,10 +247,9 @@ while i != 1:
                 reste_x = "0"
 
             try:
-                if choix[0] in possible[5:] and len(
-                        choix) == 1:  # Si "Murer" ou "Percer" est appelle sans que la direction ne soit precisee on leve une exception.
+                if choix[0] in possible[4:] and len(choix) == 1:  # Si "Murer" ou "Percer" est appelle sans que la direction ne soit precisee on leve une exception.
                     raise KeyError
-                if choix[0] in possible[5:]:
+                if choix[0] in possible[4:]:
                     assert choix[1] in possible[:4]  # Si la commande passee avec l'action "murer" ou "percer" ne fait pas partie des commandes directionnelles, on leve un exception.
                     if choix[1] in possible[:4]:  # Si l'assertion n'est pas levee, on actualise la valeur de notre variable i puis on continue de sorte à passer directement au bloc conditionnel suivant " if i == 2 : ".
                         i = 2
